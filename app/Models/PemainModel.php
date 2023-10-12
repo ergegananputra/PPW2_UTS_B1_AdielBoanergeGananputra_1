@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class PemainModel extends Model
 {
     use HasFactory;
+
+    protected $table = 'pemain';
+    protected $primaryKey = 'id';
+    protected $fillable = [
+        'nama_pemain',
+        'no_punggung',
+        'posisi'
+    ];
+
 }

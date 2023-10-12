@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PemainController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/pemain', [PemainController::class, 'index']);
+
+Route::get('/pemain/create', [PemainController::class, 'create'])->name('pemain.create');
+Route::post('/pemain', [PemainController::class, 'store'])->name('pemain.store');
